@@ -9,6 +9,7 @@ class App < Sinatra::Base
     end
 
     post "/teams" do
+      @team_name = params[:team][:name]
       members = params[:team][:members]
       @super_heroes = members.collect do |member_params|
       end
