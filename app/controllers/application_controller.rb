@@ -10,8 +10,14 @@ class App < Sinatra::Base
 
     post "/teams" do
       @team_name = params[:team][:name]
+      @team_motto = params[:team][:motto]
+      @hero_name = []
+      
       members = params[:team][:members]
       @super_heroes = members.collect do |member_params|
+        @hero_name << member_params[:name]
+        @hero_power << member_params[:power]
+        @hero_ 
       end
       erb :team
     end
