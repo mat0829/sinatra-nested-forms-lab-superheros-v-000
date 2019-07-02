@@ -12,6 +12,8 @@ class App < Sinatra::Base
       @team_name = params[:team][:name]
       @team_motto = params[:team][:motto]
       @hero_name = []
+      @hero_power = []
+      @hero_bio = []
       
       members = params[:team][:members]
       @super_heroes = members.collect do |member_params|
