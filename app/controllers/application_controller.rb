@@ -17,7 +17,7 @@ class App < Sinatra::Base
       @super_heroes = members.collect do |member_params|
         @hero_name << member_params[:name]
         @hero_power << member_params[:power]
-        @hero_ 
+        @hero_bio << member_params[:bio]
       end
       erb :team
     end
